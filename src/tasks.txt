@@ -1,0 +1,10 @@
+-- Design - end
+-- redux - end
+-- Save in redux - end
+-- Show item - end
+-- Delete btn - end
+-- add clear btn
+-- sort
+
+
+

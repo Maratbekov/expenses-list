@@ -1,25 +1,34 @@
-import logo from './logo.svg';
 import './App.css';
+import Form from "./components/Form";
+import Blocks from "./components/Blocks";
+import Expenses from "./components/Expenses";
+import {useDispatch} from "react-redux";
+import Sort from "./components/Sort";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    const dispatch = useDispatch()
+    const clear = () => {
+        dispatch({type: "CLEAR", payload: {}})
+    }
+
+    return (
+        <div className="container mx-auto px-9">
+            <div className="flex items-center justify-between">
+                <h1 className="text-center text-4xl font-bold py-8 text-gray-700">Your list expenses</h1>
+                <div className="flex items-center">
+                    <Sort/>
+                    <button onClick={()=> clear()} className="bg-gray-700 px-4 py-2 text-white rounded hover:bg-gray-900 ml-4">Clear</button>
+                </div>
+            </div>
+
+
+            <Blocks/>
+            <Form/>
+            <Expenses/>
+
+        </div>
+    );
 }
 
 export default App;
