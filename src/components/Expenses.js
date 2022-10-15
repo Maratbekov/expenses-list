@@ -12,8 +12,7 @@ const Expenses = () => {
 
     return (
         <>
-
-            {expList.length === 0 ? (<h1 className="text-center py-2 text-2xl">Expenses list empty</h1>) : (<div className="overflow-x-auto relative my-7 ">
+            {expList.length === 0 ? (<h1 className="text-center py-2 text-2xl">Expenses list empty</h1>) : (<div className="overflow-x-auto relative my-6 shadow-lg sm:rounded-lg ">
                 <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
                     <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                     <tr>

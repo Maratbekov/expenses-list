@@ -22,8 +22,8 @@ const Form = ({item,idx}) => {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
-            <div className="flex items-center">
+        <form onSubmit={handleSubmit} className="my-9">
+            <div className="flex items-center sm:block">
                 <input
                     type="date"
                     name="date"
@@ -43,6 +43,7 @@ const Form = ({item,idx}) => {
         transition
         ease-in-out
         m-2
+        sm:mx-0
         focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
       "
                     placeholder="Text input"
@@ -67,6 +68,7 @@ const Form = ({item,idx}) => {
         transition
         ease-in-out
         m-2
+        sm:mx-0
         focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
       "
                     placeholder="Text input"
@@ -90,12 +92,13 @@ const Form = ({item,idx}) => {
         transition
         ease-in-out
         mr-4
+        sm:mx-0
         focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
       "
                        placeholder="Number input"
                 />
 
-                <button className="bg-pink-700 text-white p-2 rounded">pay</button>
+                <button className="bg-pink-700 text-white p-2 rounded sm:mt-4">pay</button>
             </div>
         </form>
     );
