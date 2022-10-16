@@ -1,0 +1,8 @@
+export const ActionsTypes = {
+    ADD_EXPENSES_ITEM: "ADD_EXPENSES_ITEM",
+    DELETE_EXPENSES_ITEM: "DELETE_EXPENSES_ITEM",
+    CLEAR: "CLEAR", SORT_EXPENSES: "SORT_EXPENSES",
+
+}
+
+// export const ADD_EXPENSES_ITEM = "ADD_EXPENSES_ITEM" - экинчи жолу

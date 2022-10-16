@@ -1,14 +1,11 @@
 import React from 'react';
 import {useDispatch, useSelector} from "react-redux";
+import {DeleteItem} from "../../redux/actions/Actions";
 
 const Expenses = () => {
 
     const dispatch = useDispatch()
     const {expList} = useSelector(s => s)
-
-    const deleteItem = (idx) => {
-    dispatch({type: "DELETE_EXPENSES_ITEM", payload: idx})
-    }
 
     return (
         <>
@@ -40,7 +37,7 @@ const Expenses = () => {
                                 <td className="py-4 px-6">{el.spent}</td>
                                 <td className="py-4 px-6">
                                     <button
-                                        onClick={()=> deleteItem(idx)}
+                                        onClick={()=> dispatch(DeleteItem(idx))}
                                         className="bg-pink-700 text-white p-2 rounded">Delete</button>
                                 </td>
                             </tr>

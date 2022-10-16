@@ -1,6 +1,7 @@
 import React from 'react';
 import {useState} from "react";
 import {useDispatch,} from "react-redux";
+import {SendItem} from "../../redux/actions/Actions";
 
 const Form = ({item,idx}) => {
 
@@ -18,7 +19,7 @@ const Form = ({item,idx}) => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        dispatch({type: "ADD_EXPENSES_ITEM", payload: history})
+        dispatch(SendItem(history))
     }
 
     return (
